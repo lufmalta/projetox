@@ -12,8 +12,11 @@ spl_autoload_register(function($class){
 	else if(file_exists('core/'.$class.'.php')){
 		require 'core/'.$class.'.php';
 	}
-});
+});//isso só vai ser executado quando for chamado 
+// exemplo de ser chamado: $core = new Core(); esta chamando o spl_autoload_register;
+//outro exemplo é o $c = new $currentController(); também esta chamando o spl...
 
 $core = new Core();
 $core->run();
+
 

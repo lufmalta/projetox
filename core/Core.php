@@ -29,9 +29,9 @@ class Core{
     		$currentAction = "index";
     	}
 
-    	echo "Controller: ".$currentController."<br/>";
-    	echo "Action: ".$currentAction."<br/>";
-    	echo "Parametros:".print_r($params, true);
-
+    	$c = new $currentController();// aqui ele vai iniciar um objeto na classe que tiver selecionada nessa variavel.
+    	call_user_func_array(array($c, $currentAction), $params);
+    	//$c->$currentAction(); assim nao funciona, porque não pode mandar nenhum parametro
+    	//dentro do currentAction
     }
 }
