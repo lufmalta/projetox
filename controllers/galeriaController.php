@@ -1,8 +1,11 @@
 <?php
-class galeriaController{
+class galeriaController extends controller{
 
 	public function index(){
-		echo "Listando todas as galerias";
+		$dados = array(
+			'fotos' => 11
+		);
+		$this->loadTemplate('galeria', $dados);
 	}
 	public function abrir($id){
 		echo "Abrindo a galeria: ".$id;
