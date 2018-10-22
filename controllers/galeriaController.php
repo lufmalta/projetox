@@ -3,7 +3,7 @@ class galeriaController extends controller{
 
 	public function index(){
 		$dados = array(
-			'fotos' => 11
+			'fotos' => 5
 		);
 		$this->loadTemplate('galeria', $dados);
 	}
