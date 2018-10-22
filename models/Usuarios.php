@@ -1,5 +1,5 @@
 <?php
-class Usuarios{
+class Usuarios extends model{
 
 	public function getNome(){
 		return "Luiz Fernando";
